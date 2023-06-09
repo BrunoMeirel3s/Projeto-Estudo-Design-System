@@ -14,11 +14,15 @@ const config = {
     name: "@storybook/react-vite",
     options: {},
   },
+  "core":{
+    "builder": "@storybook/builder-vite"
+  },
+  "features":{"storyStoreV7": true},
   docs: {
     autodocs: "tag",
   },
   viteFinal:(config, {configType}) => {
-    if(configType === 'PRODUCTION'){
+    if(configType == 'PRODUCTION'){
       config.base = '/Projeto-Estudo-Design-System/'
     }
     return config
