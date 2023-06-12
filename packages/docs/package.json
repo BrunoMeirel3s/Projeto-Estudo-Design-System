@@ -10,9 +10,7 @@
     "build": "build-storybook",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "deploy-storybook": "storybook-to-ghpages",
-    "storybook:build": "storybook build",
-    "storybook:publish": "pnpm storybook:build && touch ./storybook-static/.nojekyll && gh-pages -d ./storybook-static -t true"
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "keywords": [],
   "author": "",
