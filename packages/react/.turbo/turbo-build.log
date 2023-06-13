@@ -1,0 +1,4 @@
+
+> @ocasoftware/react@2.0.0 build
+> tsup src/index.tsx --format esm,cjs --dts --external react
+
