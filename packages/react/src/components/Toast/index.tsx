@@ -25,12 +25,8 @@ export function ToastIgnite() {
               Quarta-feira, 23 de Outubro às 16h
             </span>
           </Toast.Description>
-          <Toast.Action
-            className="ToastAction"
-            asChild
-            altText="Goto schedule to undo"
-          >
-            <button className="Button small green">Undo</button>
+          <Toast.Action className="CloseButton" asChild altText="Close">
+            <button>X</button>
           </Toast.Action>
         </Toast.Root>
         <Toast.Viewport className="ToastViewport" />
