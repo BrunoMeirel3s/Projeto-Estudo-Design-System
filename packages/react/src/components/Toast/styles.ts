@@ -21,6 +21,7 @@ export const ToastContainer = styled('div', {
     'z-index': '9999',
     outline: 'none',
   },
+
   '.ToastRoot': {
     fontFamily: 'Roboto',
     'background-color': '$gray600',
@@ -31,6 +32,7 @@ export const ToastContainer = styled('div', {
     display: 'flex',
     flexDirection: 'column',
     gap: '$2',
+    position: 'relative',
   },
 
   '.ToastTitle': {
@@ -43,6 +45,15 @@ export const ToastContainer = styled('div', {
     fontSize: '$sm',
     color: '$gray200',
     fontWeight: '$normal',
+  },
+
+  '.CloseButton': {
+    position: 'absolute',
+    top: '$3',
+    right: '$3',
+    svg: {
+      color: '$white',
+    },
   },
 
   '.ToastRoot[data-state="open"]': {
