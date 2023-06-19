@@ -19,3 +19,5 @@ export * from './components/MultiStep'
 export * from './styles'
 
 export * from './components/Toast'
+
+export * from './components/Tooltip'

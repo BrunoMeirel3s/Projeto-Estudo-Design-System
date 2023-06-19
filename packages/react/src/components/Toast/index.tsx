@@ -11,7 +11,7 @@ export interface ToastProps {
 export function ToastIgnite({
   title,
   description,
-  openModal = false,
+  openModal = true,
 }: ToastProps) {
   const [open, setOpen] = useState(false)
 
