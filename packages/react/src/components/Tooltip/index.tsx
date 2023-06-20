@@ -1,7 +1,8 @@
 import * as TooltipRadix from '@radix-ui/react-tooltip'
-import { ContainerTooltip } from './styles'
+import { ContainerTooltip, TooltipRadixContent } from './styles'
 
-export function Ignite() {
+export interface TooltipProps {}
+export function Tooltip() {
   return (
     <ContainerTooltip>
       <TooltipRadix.Provider>
@@ -10,9 +11,10 @@ export function Ignite() {
             <button className="IconButton">Teste</button>
           </TooltipRadix.Trigger>
           <TooltipRadix.Portal>
-            <TooltipRadix.Content className="TooltipContent" sideOffset={5}>
+            <TooltipRadixContent sideOffset={5}>
               Adicionar a biblioteca
-            </TooltipRadix.Content>
+              <TooltipRadix.Arrow className="TooltipArrow" />
+            </TooltipRadixContent>
           </TooltipRadix.Portal>
         </TooltipRadix.Root>
       </TooltipRadix.Provider>

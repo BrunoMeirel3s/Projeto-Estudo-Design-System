@@ -1,40 +1,8 @@
 import { styled } from '../../styles'
-
+import * as TooltipRadix from '@radix-ui/react-tooltip'
 export const ContainerTooltip = styled('div', {
-  /* reset */
   button: {
     all: 'unset',
-  },
-
-  '.TooltipContent': {
-    borderRadius: '4px',
-    padding: '10px 15px',
-    fontSize: '15px',
-    lineHeight: '1',
-    color: 'var(--violet11)',
-    backgroundColor: 'white',
-    'box-shadow':
-      'hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px',
-    'user-select': 'none',
-    'animation-duration': '400ms',
-    'animation-timing-function': 'cubic-bezier(0.16, 1, 0.3, 1)',
-    'will-change': 'transform, opacity',
-  },
-  '.TooltipContent[data-state="delayed-open"][data-side="top"]': {
-    'animation-name': 'slideDownAndFade',
-  },
-  '.TooltipContent[data-state="delayed-open"][data-side="right"]': {
-    'animation-name': 'slideLeftAndFade',
-  },
-  '.TooltipContent[data-state="delayed-open"][data-side="bottom"]': {
-    'animation-name': 'slideUpAndFade',
-  },
-  '.TooltipContent[data-state="delayed-open"][data-side="left"]': {
-    'animation-name': 'slideRightAndFade',
-  },
-
-  '.TooltipArrow': {
-    fill: 'white',
   },
   '.IconButton': {
     fontFamily: 'inherit',
@@ -47,9 +15,6 @@ export const ContainerTooltip = styled('div', {
     color: 'var(--violet11)',
     backgroundColor: 'white',
     'box-shadow': '0 2px 10px var(--blackA7)',
-  },
-  '.IconButton:hover': {
-    backgroundColor: 'var(--violet3)',
   },
   '.IconButton:focus': {
     boxShadow: '0 0 0 2px black',
@@ -97,5 +62,37 @@ export const ContainerTooltip = styled('div', {
       opacity: '1',
       transform: 'translateX(0)',
     },
+  },
+})
+
+export const TooltipRadixContent = styled(TooltipRadix.Content, {
+  borderRadius: '4px',
+  padding: '10px 15px',
+  fontSize: '15px',
+  lineHeight: '1',
+  color: '$gray200',
+  backgroundColor: '$gray600',
+  'box-shadow':
+    'hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px',
+  'user-select': 'none',
+  'animation-duration': '400ms',
+  'animation-timing-function': 'cubic-bezier(0.16, 1, 0.3, 1)',
+  'will-change': 'transform, opacity',
+
+  '&[data-state="delayed-open"][data-side="top"]': {
+    'animation-name': 'slideDownAndFade',
+  },
+  '&[data-state="delayed-open"][data-side="right"]': {
+    'animation-name': 'slideLeftAndFade',
+  },
+  '&[data-state="delayed-open"][data-side="bottom"]': {
+    'animation-name': 'slideUpAndFade',
+  },
+  '&[data-state="delayed-open"][data-side="left"]': {
+    'animation-name': 'slideRightAndFade',
+  },
+
+  '.TooltipArrow': {
+    fill: '$gray700',
   },
 })
