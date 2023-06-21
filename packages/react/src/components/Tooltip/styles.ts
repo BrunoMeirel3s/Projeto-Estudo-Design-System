@@ -1,25 +1,6 @@
 import { styled } from '../../styles'
 import * as TooltipRadix from '@radix-ui/react-tooltip'
 export const ContainerTooltip = styled('div', {
-  button: {
-    all: 'unset',
-  },
-  '.IconButton': {
-    fontFamily: 'inherit',
-    borderRadius: '100%',
-    height: '35px',
-    width: '35px',
-    display: 'inline-flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    color: 'var(--violet11)',
-    backgroundColor: 'white',
-    'box-shadow': '0 2px 10px var(--blackA7)',
-  },
-  '.IconButton:focus': {
-    boxShadow: '0 0 0 2px black',
-  },
-
   '@keyframes slideUpAndFade': {
     from: {
       opacity: '0',
@@ -72,6 +53,7 @@ export const TooltipRadixContent = styled(TooltipRadix.Content, {
   lineHeight: '1',
   color: '$gray200',
   backgroundColor: '$gray600',
+
   'box-shadow':
     'hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px',
   'user-select': 'none',

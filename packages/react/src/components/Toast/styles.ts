@@ -8,8 +8,8 @@ export const ToastContainer = styled('div', {
   '.ToastViewport': {
     '--viewport-padding': '25px',
     position: 'fixed',
-    bottom: '0',
-    right: '0',
+    bottom: '0px',
+    right: '0px',
     display: 'flex',
     'flex-direction': 'column',
     padding: 'var(--viewport-padding)',

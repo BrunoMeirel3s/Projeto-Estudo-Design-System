@@ -4,17 +4,18 @@ import { Button, ToastIgnite as Toast, ToastProps } from '@ignite-ui/react'
 export default {
   title: 'Surfaces/Toast',
   component: Toast,
-  args: {},
-  decorators: [
-    (Story) => {
-      return (
-        <>
-          <Button variant="primary">Abrir modal</Button>
-          {Story()}
-        </>
-      )
-    },
-  ],
+  args: {
+    children: (
+      <>
+        <Button variant="primary">Abrir modal</Button>
+        <Toast
+          title="Agendamento realizado com sucesso"
+          description="Segunda-feira, 19 de Junho às 17h"
+          openModal={true}
+        ></Toast>
+      </>
+    ),
+  },
   onClick: {
     action: 'click',
   },
